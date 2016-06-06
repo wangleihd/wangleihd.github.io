@@ -1,0 +1,2 @@
+window.console && window.console.log("%c", "font-size: 1px; padding: 99px 160px; line-height: 198px;background:url('http://wileam-file.b0.upaiyun.com/miaocoding.gif') no-repeat;background-size:'320px 198px';color:transparent;");
+console.info("如需联系，可邮件: joanna_wu@live.com . Happy coding!");
