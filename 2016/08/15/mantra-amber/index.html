@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Node.js 开发指南 | Leix.Wang</title>
+  <title>Meteor + mantra + Reactjs 开发Amber 教学系统 | Leix.Wang</title>
   <meta name="author" content="Richard Wang">
   
-  <meta name="description" content="Node.js 开发指南, 记录着我学习Node.js整个思路和方法. 一些使用Node.js开发常用的命令和步骤.">
+  <meta name="description" content="使用最新的Meteor框架 + 用mantra和最流行的前端框架React实现教学教育网站的制作过程.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Node.js 开发指南"/>
+  <meta property="og:title" content="Meteor + mantra + Reactjs 开发Amber 教学系统"/>
   <meta property="og:site_name" content="Leix.Wang"/>
 
   
@@ -89,10 +89,10 @@
     <div id="main-col" class="alignleft"><div id="wrapper">
 <div class="prev_next clearfix">
   
-  <a href="/2016/07/30/meteor/" class="prev" title="Meteor + React 开发框架实例">上一篇<span class="xs-hidden">：Meteor + React 开发框架实例</span></a>
+    <a href="javascript:;" class="prev disabled" title="没有上一篇了">已经是第一篇了</a>
   
   
-    <a href="javascript:;" class="next disabled" title="没有下一篇了">已经是最后一篇了</a>
+  <a href="/2016/07/30/meteor/" class="next" title="Meteor + React 开发框架实例">下一篇<span class="xs-hidden">：Meteor + React 开发框架实例</span></a>
   
 </div>
 
@@ -118,24 +118,74 @@
       
       
   
-    <h1 class="title">Node.js 开发指南</h1>
+    <h1 class="title">Meteor + mantra + Reactjs 开发Amber 教学系统</h1>
   
 
-      <time datetime="2016-07-30T15:23:51.000Z">2016-07-30</time>
+      <time datetime="2016-08-15T11:52:12.000Z">2016-08-15</time>
 
     </header>
     <div class="entry">
       
-        <p>Node.js 开发指南, 记录着我学习Node.js整个思路和方法. 一些使用Node.js开发常用的命令和步骤.</p>
+        <p>使用最新的<code>Meteor</code>框架 + 用<code>mantra</code>和最流行的前端框架<code>React</code>实现教学教育网站的制作过程.</p>
 <a id="more"></a>
-<h1 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h1><p>高度包容, 快速而极简的Node.js Web框架.</p>
-<h2 id="Express生成命令"><a href="#Express生成命令" class="headerlink" title="Express生成命令"></a>Express生成命令</h2><p>使用下面的命令安装express:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express-generator -g</span><br></pre></td></tr></table></figure></p>
-<p>如果希望创建一个名为myapp的express应用程序:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express myapp</span><br></pre></td></tr></table></figure></p>
-<p>需要安装依赖项:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> myapp</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>在mac和linux上, 使用下面的命令运行此应用程序:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ DEBUG=myapp:* npm start</span><br></pre></td></tr></table></figure></p>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><p>下面我们使用到的开发环境及相关的版本号信息.</p>
+<ul>
+<li>Meteor 1.4</li>
+<li>Mantra</li>
+<li>React 0.15</li>
+<li>semantic-ui</li>
+<li>flow-router</li>
+</ul>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>首先我的项目创建在<code>github</code>上. <a href="https://github.com/wangleihd/car.git" target="_blank" rel="external">源码下载地址</a></p>
+<p>使用<code>mantra</code>命令创建<code>amber</code>项目, 在使用<code>mantra</code>前, 需要安装<code>mantra</code>.</p>
+<ul>
+<li><p>安装<code>mantra</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g mantra-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建<code>amber</code>项目<br><code>mantra</code>会调用本地安装好的<code>meteor</code>进行创建项目, 然后再根据需求对项目进行规范化.</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mantra create amber</span><br></pre></td></tr></table></figure>
+<h4 id="删除没用的包"><a href="#删除没用的包" class="headerlink" title="删除没用的包"></a>删除没用的包</h4><ul>
+<li>删除<code>meteor</code>自带的包.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor remove insecure</span><br></pre></td></tr></table></figure>
+<ul>
+<li>默认的CSS</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor remove standard-minifier-css</span><br></pre></td></tr></table></figure>
+<ul>
+<li>自动发布</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor remove autopublish</span><br></pre></td></tr></table></figure>
+<h4 id="安装-React"><a href="#安装-React" class="headerlink" title="安装 React"></a>安装 React</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ meteor npm install --save react react-dom</span><br><span class="line">$ meteor npm install --save react-mounter</span><br></pre></td></tr></table></figure>
+<h4 id="安装-semantic-ui"><a href="#安装-semantic-ui" class="headerlink" title="安装 semantic ui"></a>安装 semantic ui</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor add semantic:ui juliancwirko:postcss less jquery</span><br></pre></td></tr></table></figure>
+<h4 id="安装-flow-router"><a href="#安装-flow-router" class="headerlink" title="安装 flow-router"></a>安装 flow-router</h4><p>安装命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor add kadira:flow-router</span><br></pre></td></tr></table></figure>
+<p>需要在 package.json 加入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;autoprefixer&quot;: &quot;^6.3.1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;postcss&quot;: &#123;</span><br><span class="line">    &quot;plugins&quot;: &#123;</span><br><span class="line">      &quot;autoprefixer&quot;: &#123;&quot;browsers&quot;: [&quot;last 2 versions&quot;]&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后再执行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor npm install</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>需要执行下面的两步骤:</li>
+</ul>
+<ol>
+<li>必须在项目中的<code>client/lib/semantic-ui/</code>目录下创建一个新的空文件<code>custom.semantic.json</code>, 注意需要特别提示不要改更目录名和文件名, 因为Meteor的规定. 然后执行 <code>meteor</code>.</li>
+</ol>
+<p>参考下面的命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">~/car</span><br><span class="line">$ touch  client/lib/semantic-ui/custom.semantic.json</span><br><span class="line">$ meteor</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>然后<code>meteor</code>启动后, 会再<code>client/lib/semantic-ui/</code>目录下自动创建一个<code>.custom.semantic.json</code>的隐藏文件, 需要先把<code>meteor</code>停掉. 然后删除这个<code>meteor</code>自动生成的文件.再重新启动<code>meteor</code>. 会再<code>client/lib/semantic-ui/</code>目录下创建出semantic-ui相应的文件. 如果</li>
+</ol>
+<p>参考下在的命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ 按键盘上的 ctrl + c 停止 meteor.</span><br><span class="line">$ rm client/lib/semantic-ui/.custom.semantic.json</span><br><span class="line">$ meteor</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>使用时需要用<code>className</code>.</li>
+</ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://expressjs.com/" target="_blank" rel="external">Express官方网站 - 英文</a></li>
-<li><a href="http://expressjs.com/zh-cn/" target="_blank" rel="external">Express官方网站 - 中文</a></li>
+<li><a href="http://semantic-ui.com/" target="_blank" rel="external">semantic 官网</a></li>
+<li><a href="http://www.semantic-ui-cn.com/" target="_blank" rel="external">semantic 中文</a></li>
+<li><a href="https://facebook.github.io/react/" target="_blank" rel="external">React 官网</a></li>
+<li><a href="http://reactjs.cn/" target="_blank" rel="external">React 中文</a></li>
+<li><a href="http://www.meteor.com" target="_blank" rel="external">Meteor 官网</a></li>
+<li><a href="https://github.com/kadirahq/flow-router" target="_blank" rel="external">FlowRouter</a></li>
 </ul>
 
       
@@ -156,10 +206,10 @@
 
 <div class="prev_next clearfix">
   
-  <a href="/2016/07/30/meteor/" class="prev" title="Meteor + React 开发框架实例">上一篇<span class="xs-hidden">：Meteor + React 开发框架实例</span></a>
+    <a href="javascript:;" class="prev disabled" title="没有上一篇了">已经是第一篇了</a>
   
   
-    <a href="javascript:;" class="next disabled" title="没有下一篇了">已经是最后一篇了</a>
+  <a href="/2016/07/30/meteor/" class="next" title="Meteor + React 开发框架实例">下一篇<span class="xs-hidden">：Meteor + React 开发框架实例</span></a>
   
 </div>
 

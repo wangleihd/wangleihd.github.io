@@ -89,7 +89,7 @@
     <div id="main-col" class="alignleft"><div id="wrapper">
 <div class="prev_next clearfix">
   
-    <a href="javascript:;" class="prev disabled" title="没有上一篇了">已经是第一篇了</a>
+  <a href="/2016/08/15/mantra-amber/" class="prev" title="Meteor + mantra + Reactjs 开发Amber 教学系统">上一篇<span class="xs-hidden">：Meteor + mantra + Reactjs 开发Amber 教学系统</span></a>
   
   
   <a href="/2016/07/30/node/" class="next" title="Node.js 开发指南">下一篇<span class="xs-hidden">：Node.js 开发指南</span></a>
@@ -199,7 +199,7 @@
 
 <div class="prev_next clearfix">
   
-    <a href="javascript:;" class="prev disabled" title="没有上一篇了">已经是第一篇了</a>
+  <a href="/2016/08/15/mantra-amber/" class="prev" title="Meteor + mantra + Reactjs 开发Amber 教学系统">上一篇<span class="xs-hidden">：Meteor + mantra + Reactjs 开发Amber 教学系统</span></a>
   
   
   <a href="/2016/07/30/node/" class="next" title="Node.js 开发指南">下一篇<span class="xs-hidden">：Node.js 开发指南</span></a>
@@ -275,6 +275,12 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/2016/07/30/node/' title='Node.js 开发指南'>" + day + "</a>";
             }
     
+            var postdate = new Date("Mon Aug 15 2016 19:52:12 GMT+0800");
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/2016/08/15/mantra-amber/' title='Meteor + mantra + Reactjs 开发Amber 教学系统'>" + day + "</a>";
+            }
+    
 
         //howiefh
     }
@@ -293,6 +299,10 @@ $$("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 <div class="widget tag">
   <h3 class="title"><i class="fa fa-files-o" aria-hidden="true"></i>     最新文章<a href="/archives" class="more-link">More...</a></h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2016/08/15/mantra-amber/">Meteor + mantra + Reactjs 开发Amber 教学系统</a>
+      </li>
     
       <li>
         <a href="/2016/07/30/meteor/">Meteor + React 开发框架实例</a>

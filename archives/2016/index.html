@@ -94,6 +94,18 @@
         <div class="post-content">
           <header>
             <div class="icon"></div>
+            <time datetime="2016-08-15T11:52:12.000Z"><a href="/2016/08/15/mantra-amber/">2016-08-15</a></time>
+            
+              <h1 class="title"><a href="/2016/08/15/mantra-amber/">Meteor + mantra + Reactjs 开发Amber 教学系统</a></h1>
+            
+          </header>
+        </div>
+      </article>
+    
+      <article class="post">
+        <div class="post-content">
+          <header>
+            <div class="icon"></div>
             <time datetime="2016-07-30T15:23:51.000Z"><a href="/2016/07/30/meteor/">2016-07-30</a></time>
             
               <h1 class="title"><a href="/2016/07/30/meteor/">Meteor + React 开发框架实例</a></h1>
@@ -184,6 +196,12 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/2016/07/30/node/' title='Node.js 开发指南'>" + day + "</a>";
             }
     
+            var postdate = new Date("Mon Aug 15 2016 19:52:12 GMT+0800");
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/2016/08/15/mantra-amber/' title='Meteor + mantra + Reactjs 开发Amber 教学系统'>" + day + "</a>";
+            }
+    
 
         //howiefh
     }
@@ -202,6 +220,10 @@ $$("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 <div class="widget tag">
   <h3 class="title"><i class="fa fa-files-o" aria-hidden="true"></i>     最新文章<a href="/archives" class="more-link">More...</a></h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2016/08/15/mantra-amber/">Meteor + mantra + Reactjs 开发Amber 教学系统</a>
+      </li>
     
       <li>
         <a href="/2016/07/30/meteor/">Meteor + React 开发框架实例</a>
