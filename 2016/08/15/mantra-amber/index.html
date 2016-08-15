@@ -139,7 +139,7 @@
 <h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>首先我的项目创建在<code>github</code>上. <a href="https://github.com/wangleihd/car.git" target="_blank" rel="external">源码下载地址</a></p>
 <p>使用<code>mantra</code>命令创建<code>amber</code>项目, 在使用<code>mantra</code>前, 需要安装<code>mantra</code>.</p>
 <ul>
-<li>安装<code>mantra</code></li>
+<li>安装<code>mantra</code>工具</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g mantra-cli</span><br></pre></td></tr></table></figure>
 <ul>
@@ -271,16 +271,16 @@ var cale = new Calendar("idCalendar", {
         // }
 
         
-            var postdate = new Date("Sat Jul 30 2016 23:23:51 GMT+0800");
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/2016/07/30/meteor/' title='Meteor + React 开发框架实例'>" + day + "</a>";
-            }
-    
             var postdate = new Date("Mon Aug 15 2016 19:52:12 GMT+0800");
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/2016/08/15/mantra-amber/' title='Meteor + mantra + Reactjs 开发Amber 教学系统'>" + day + "</a>";
+            }
+    
+            var postdate = new Date("Sat Jul 30 2016 23:23:51 GMT+0800");
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/2016/07/30/meteor/' title='Meteor + React 开发框架实例'>" + day + "</a>";
             }
     
             var postdate = new Date("Sat Jul 30 2016 23:23:51 GMT+0800");

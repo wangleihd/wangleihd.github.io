@@ -184,16 +184,16 @@ var cale = new Calendar("idCalendar", {
         // }
 
         
-            var postdate = new Date("Sat Jul 30 2016 23:23:51 GMT+0800");
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/2016/07/30/meteor/' title='Meteor + React 开发框架实例'>" + day + "</a>";
-            }
-    
             var postdate = new Date("Mon Aug 15 2016 19:52:12 GMT+0800");
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/2016/08/15/mantra-amber/' title='Meteor + mantra + Reactjs 开发Amber 教学系统'>" + day + "</a>";
+            }
+    
+            var postdate = new Date("Sat Jul 30 2016 23:23:51 GMT+0800");
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) {
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/2016/07/30/meteor/' title='Meteor + React 开发框架实例'>" + day + "</a>";
             }
     
             var postdate = new Date("Sat Jul 30 2016 23:23:51 GMT+0800");
