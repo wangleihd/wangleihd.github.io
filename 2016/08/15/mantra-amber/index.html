@@ -62,6 +62,7 @@
   })();
 </script>
 
+  <meta property="wb:webmaster" content="a544d7fb76ca45ca" />
 </head>
 
 
@@ -152,17 +153,17 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor remove insecure</span><br></pre></td></tr></table></figure>
 <ul>
-<li>默认的CSS</li>
+<li>删除默认的CSS</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor remove standard-minifier-css</span><br></pre></td></tr></table></figure>
 <ul>
-<li>自动发布</li>
+<li>删除自动发布包, 这是测时使用, 实际开发的时候推荐使用, 他会把server的代码都发给client端.</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor remove autopublish</span><br></pre></td></tr></table></figure>
 <h4 id="安装-React"><a href="#安装-React" class="headerlink" title="安装 React"></a>安装 React</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ meteor npm install --save react react-dom</span><br><span class="line">$ meteor npm install --save react-mounter</span><br></pre></td></tr></table></figure>
 <h4 id="安装-semantic-ui"><a href="#安装-semantic-ui" class="headerlink" title="安装 semantic ui"></a>安装 semantic ui</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor add semantic:ui juliancwirko:postcss less jquery</span><br></pre></td></tr></table></figure>
 <h4 id="安装-flow-router"><a href="#安装-flow-router" class="headerlink" title="安装 flow-router"></a>安装 flow-router</h4><p>安装命令:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor add kadira:flow-router</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ meteor add kadira:flow-router    </span><br><span class="line">$ meteor add kadira:dochead</span><br></pre></td></tr></table></figure>
 <p>需要在 package.json 加入:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;autoprefixer&quot;: &quot;^6.3.1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;postcss&quot;: &#123;</span><br><span class="line">    &quot;plugins&quot;: &#123;</span><br><span class="line">      &quot;autoprefixer&quot;: &#123;&quot;browsers&quot;: [&quot;last 2 versions&quot;]&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后再执行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ meteor npm install</span><br></pre></td></tr></table></figure></p>
